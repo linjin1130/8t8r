@@ -358,7 +358,7 @@ adc9653_intf u_adc0_intf
 adc9653_intf u_adc1_intf
 (
    .adc_sync   (  ADC1_SYNC    ),  
-   .rst        (  rst_adc1     ),
+   .rst        (  rst_adc0     ),
    .adc_fco_p  (  ADC1_FCO_P   ),
    .adc_fco_n  (  ADC1_FCO_N   ),
    .adc_dco_p  (  ADC1_DCO_P   ),

@@ -43,6 +43,7 @@ entity ADC_interface is
     clk_adc      : out  std_logic;
     fco          : in  std_logic;
     dly_clk      : in  std_logic;
+    tap_out      : out std_logic_vector(4 downto 0);
     data_out : out std_logic_vector(63 downto 0)
     );
 end ADC_interface;
@@ -53,12 +54,11 @@ architecture Behavioral of ADC_interface is
   signal clk_div_out  : std_logic;
   
   --for test monitor
-  signal tap_out      : std_logic_vector(4 downto 0);
+  
   signal dly_rdy      : std_logic;
   
   component AD_CLK_GENERATE is
     port (
-      rst_in      : in  std_logic;
       dco         : in  std_logic;
       -- clkB     : in  std_logic;
       dly_clk     : in  std_logic;
@@ -109,7 +109,6 @@ begin
 
   AD_CLK_GENERATE_inst : AD_CLK_GENERATE
     port map (
-      rst_in      => '0',
       dco         => dco,
       dly_clk     => dly_clk,
       re_sync_in  => rst,

@@ -99,10 +99,10 @@ assign ch_d0_n = {adc_d0_a_n,adc_d0_b_n, adc_d0_c_n, adc_d0_d_n};
 assign ch_d1_p = {adc_d1_a_p,adc_d1_b_p, adc_d1_c_p, adc_d1_d_p};
 assign ch_d1_n = {adc_d1_a_n,adc_d1_b_n, adc_d1_c_n, adc_d1_d_n};
 
+wire [4:0] tap_out;
 ADC_interface ADC_interface_inst
 (
-   .rst      ( rst_adc        ),
-   .re_sync_in ( 0    ),
+   .rst      ( rst_adc  ),
    .ch_d0_p  ( ch_d0_p  ),
    .ch_d0_n  ( ch_d0_n  ),
    .ch_d1_p  ( ch_d1_p  ),
@@ -111,9 +111,15 @@ ADC_interface ADC_interface_inst
    .fco      ( fco      ),
    .clk_adc  ( adc_clk  ),
    .dly_clk  ( dly_clk  ),
+   .tap_out  ( tap_out  ),
    .data_out ( data_out )
 );
-
+wire [7:0] debug_tap = {3'b000,tap_out};
+ila_4k_8bit u_adc0
+(
+  .clk    ( clk_adc  ),
+  .probe0 (  debug_tap  )
+);
 BUFG u_clkadc
 (
    .I ( adc_clk ),
