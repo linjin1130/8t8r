@@ -101,7 +101,7 @@ module AD_CLK_GENERATE
        re_sync_in_d1    <= re_sync_in;
        re_sync_in_d2    <= re_sync_in_d1;
       if(re_sync == 1) begin
-          delay_tap_dly <= delay_tap_dly + 1;
+          delay_tap_dly <= 10;
           load_en_dly   <= 1;
       end
       else begin
