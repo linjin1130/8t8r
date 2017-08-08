@@ -12,7 +12,7 @@
 module adc9653_intf
 (  
    output          adc_pdwn   , //From ADC pin 
-   output          adc_sync   ,
+   output  reg    adc_sync   ,
    input           rst        ,
    input           adc_fco_p  ,
    input           adc_fco_n  ,
@@ -90,10 +90,19 @@ reg rst_sys_async;
 reg rst_sys_sync;
 reg rst_adc;
 always @(posedge adc_clk) begin
-    rst_sys_async <= rst;
-    rst_sys_sync <= rst_sys_async;
-    rst_adc <= rst_sys_sync & (!rst_sys_async);
+    rst_sys_async   <= rst;
+    rst_sys_sync    <= rst_sys_async;
+    rst_adc         <= !rst_sys_sync & (rst_sys_async);//ÏÂ½µÑØ
 end
+
+reg sync_async;
+reg sync_sync;
+always @(posedge fco) begin
+    sync_async   <= rst;
+    sync_sync    <= sync_async;
+    adc_sync     <= sync_sync & (!sync_async);//ÉÏÉýÑØ
+end
+
 assign ch_d0_p = {adc_d0_a_p,adc_d0_b_p, adc_d0_c_p, adc_d0_d_p};
 assign ch_d0_n = {adc_d0_a_n,adc_d0_b_n, adc_d0_c_n, adc_d0_d_n};
 assign ch_d1_p = {adc_d1_a_p,adc_d1_b_p, adc_d1_c_p, adc_d1_d_p};
@@ -114,12 +123,12 @@ ADC_interface ADC_interface_inst
    .tap_out  ( tap_out  ),
    .data_out ( data_out )
 );
-wire [7:0] debug_tap = {3'b000,tap_out};
-ila_4k_8bit u_adc0
-(
-  .clk    ( clk_adc  ),
-  .probe0 (  debug_tap  )
-);
+//wire [7:0] debug_tap = {3'b000,tap_out};
+//ila_4k_8bit u_adc0
+//(
+//  .clk    ( clk_adc  ),
+//  .probe0 (  debug_tap  )
+//);
 BUFG u_clkadc
 (
    .I ( adc_clk ),

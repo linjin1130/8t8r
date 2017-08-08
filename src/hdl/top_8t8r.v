@@ -321,6 +321,7 @@ data_proc u_data_proc
 ///*********************************************************************
 /// ADC intf                                                            
 ///*********************************************************************
+assign ADC1_SYNC = ADC0_SYNC;
 adc9653_intf u_adc0_intf
 (  
    .adc_sync   (  ADC0_SYNC    ),
@@ -357,7 +358,7 @@ adc9653_intf u_adc0_intf
 
 adc9653_intf u_adc1_intf
 (
-   .adc_sync   (  ADC1_SYNC    ),  
+   .adc_sync   (      ),  
    .rst        (  rst_adc0     ),
    .adc_fco_p  (  ADC1_FCO_P   ),
    .adc_fco_n  (  ADC1_FCO_N   ),
