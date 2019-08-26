@@ -1,19 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2015.2.1 (64-bit)              -->
+<!-- Product Version: Vivado v2016.3 (64-bit)              -->
 <!--                                                         -->
-<!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
+<!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="D:/FPGA/TOP_8T8R_DAC250M--/8t8r/prj/prj_8t8r.xpr">
+<Project Version="7" Minor="17" Path="C:/Current_Key_Projects/8t8r/prj/prj_8t8r.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ceace8b330ca4030b8b2dd25f60131fd"/>
     <Option Name="Part" Val="xc7a200tsbg484-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPCachePermission" Val="disable"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
-    <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/prj_8t8r.ip_user_files"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/prj_8t8r.ip_user_files/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="DSANumComputeUnits" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="0"/>
+    <Option Name="WTModelSimExportSim" Val="0"/>
+    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTIesExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="0"/>
+    <Option Name="WTRivieraExportSim" Val="0"/>
+    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
+    <Option Name="XSimRadix" Val="hex"/>
+    <Option Name="XSimTimeUnit" Val="ns"/>
+    <Option Name="XSimArrayDisplayLimit" Val="64"/>
+    <Option Name="XSimTraceLimit" Val="65536"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -191,12 +222,15 @@
         <Option Name="TopModule" Val="top_8t8r"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
     <FileSet Name="tx_pll" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tx_pll">
       <File Path="$PPRDIR/../../../TOP_8T8R_DAC250M/prj/prj_8t8r.srcs/sources_1/ip/tx_pll/tx_pll.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -210,6 +244,7 @@
     <FileSet Name="rom" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rom">
       <File Path="$PPRDIR/../../../TOP_8T8R_DAC250M/prj/prj_8t8r.srcs/sources_1/ip/rom/rom.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -223,6 +258,7 @@
     <FileSet Name="ila_4k" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_4k">
       <File Path="$PPRDIR/../../../TOP_8T8R_DAC250M/prj/prj_8t8r.srcs/sources_1/ip/ila_4k/ila_4k.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -262,6 +298,7 @@
     <FileSet Name="ila_4k_8bit" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_4k_8bit">
       <File Path="$PSRCDIR/sources_1/ip/ila_4k_8bit/ila_4k_8bit.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -284,12 +321,6 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
-    <Simulator Name="IES">
-      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
-    </Simulator>
-    <Simulator Name="VCS">
-      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
-    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
     </Simulator>
@@ -297,63 +328,57 @@
       <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
-  <Runs Version="1" Minor="9">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tsbg484-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tsbg484-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="tx_pll_synth_1" Type="Ft3:Synth" SrcSet="tx_pll" Part="xc7a200tsbg484-2" ConstrsSet="tx_pll" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/tx_pll_synth_1">
+    <Run Id="tx_pll_synth_1" Type="Ft3:Synth" SrcSet="tx_pll" Part="xc7a200tsbg484-2" ConstrsSet="tx_pll" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="rom_synth_1" Type="Ft3:Synth" SrcSet="rom" Part="xc7a200tsbg484-2" ConstrsSet="rom" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/rom_synth_1">
+    <Run Id="rom_synth_1" Type="Ft3:Synth" SrcSet="rom" Part="xc7a200tsbg484-2" ConstrsSet="rom" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ila_4k_synth_1" Type="Ft3:Synth" SrcSet="ila_4k" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_4k_synth_1">
+    <Run Id="ila_4k_synth_1" Type="Ft3:Synth" SrcSet="ila_4k" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="filter_synth_1" Type="Ft3:Synth" SrcSet="filter" Part="xc7a200tsbg484-2" ConstrsSet="filter" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/filter_synth_1">
+    <Run Id="filter_synth_1" Type="Ft3:Synth" SrcSet="filter" Part="xc7a200tsbg484-2" ConstrsSet="filter" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="dpram_64bx8_synth_1" Type="Ft3:Synth" SrcSet="dpram_64bx8" Part="xc7a200tsbg484-2" ConstrsSet="dpram_64bx8" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dpram_64bx8_synth_1">
+    <Run Id="dpram_64bx8_synth_1" Type="Ft3:Synth" SrcSet="dpram_64bx8" Part="xc7a200tsbg484-2" ConstrsSet="dpram_64bx8" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ila_4k_8bit_synth_1" Type="Ft3:Synth" SrcSet="ila_4k_8bit" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k_8bit" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_4k_8bit_synth_1">
+    <Run Id="ila_4k_8bit_synth_1" Type="Ft3:Synth" SrcSet="ila_4k_8bit" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k_8bit" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="tx_pll_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="tx_pll" Description="Vivado Implementation Defaults" SynthRun="tx_pll_synth_1">
+    <Run Id="tx_pll_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="tx_pll" Description="Vivado Implementation Defaults" SynthRun="tx_pll_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -366,8 +391,9 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="rom_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="rom" Description="Vivado Implementation Defaults" SynthRun="rom_synth_1">
+    <Run Id="rom_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="rom" Description="Vivado Implementation Defaults" SynthRun="rom_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -380,8 +406,9 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ila_4k_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k" Description="Vivado Implementation Defaults" SynthRun="ila_4k_synth_1">
+    <Run Id="ila_4k_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k" Description="Vivado Implementation Defaults" SynthRun="ila_4k_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -394,12 +421,11 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -410,13 +436,11 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="filter_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="filter" Description="Vivado Implementation Defaults" SynthRun="filter_synth_1">
+    <Run Id="filter_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="filter" Description="Vivado Implementation Defaults" SynthRun="filter_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -427,12 +451,11 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="dpram_64bx8_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="dpram_64bx8" Description="Vivado Implementation Defaults" SynthRun="dpram_64bx8_synth_1">
+    <Run Id="dpram_64bx8_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="dpram_64bx8" Description="Vivado Implementation Defaults" SynthRun="dpram_64bx8_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -443,12 +466,11 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ila_4k_8bit_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k_8bit" Description="Vivado Implementation Defaults" SynthRun="ila_4k_8bit_synth_1">
+    <Run Id="ila_4k_8bit_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tsbg484-2" ConstrsSet="ila_4k_8bit" Description="Vivado Implementation Defaults" SynthRun="ila_4k_8bit_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -459,6 +481,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
   </Runs>
 </Project>
